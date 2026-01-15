@@ -1,548 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 7.3.7.2 (Linux)"/>
-	<meta name="created" content="2026-01-15T10:31:47.592080474"/>
-	<meta name="changed" content="2026-01-15T10:32:30.889793829"/>
-	<style type="text/css">
-		@page { size: 8.27in 11.69in; margin: 0.79in }
-		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
-	</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Cybersecurity portfolio of Claudias Musavini Misiko – Web Security, Penetration Testing, SOC Analysis, Secure Backend Development." />
+  <title>Claudias Musavini | Cybersecurity Portfolio</title>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="no-referrer" />
+  <style>
+    /* ====== RESET ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #0f172a; /* dark navy */
+      color: #e5e7eb;
+    }
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* ====== LAYOUT ====== */
+    header {
+      background: linear-gradient(135deg, #020617, #020617);
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    header h2 {
+      font-size: 1.1rem;
+      font-weight: normal;
+      color: #94a3b8;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #38bdf8;
+      padding-left: 0.6rem;
+    }
+    .about p {
+      margin-bottom: 1rem;
+      color: #cbd5f5;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: #020617;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #1e293b;
+    }
+    .skill-card h4 {
+      margin-bottom: 0.5rem;
+      color: #38bdf8;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .project-card {
+      background: #020617;
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid #1e293b;
+    }
+    .project-card h4 {
+      margin-bottom: 0.5rem;
+      color: #38bdf8;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #0ea5e9;
+      text-decoration: none;
+    }
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
 </head>
-<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0in">
-&lt;!DOCTYPE html&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;html lang=&quot;en&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;head&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-charset=&quot;UTF-8&quot; /&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-name=&quot;viewport&quot; content=&quot;width=device-width,
-initial-scale=1.0&quot; /&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-name=&quot;description&quot; content=&quot;Cybersecurity portfolio of
-Claudias Musavini Misiko – Web Security, Penetration Testing, SOC
-Analysis, Secure Backend Development.&quot; /&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;title&gt;Claudias
-Musavini | Cybersecurity Portfolio&lt;/title&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Claudias Musavini Misiko</h1>
+    <h2>Cybersecurity &amp; Digital Forensics | Web Security | SOC Analyst</h2>
+    <a class="btn" href="#portfolio">View Portfolio</a>
+  </header>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;!-- Basic
-security headers (client-side best practice) --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-http-equiv=&quot;X-Content-Type-Options&quot; content=&quot;nosniff&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-http-equiv=&quot;X-Frame-Options&quot; content=&quot;DENY&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;meta
-http-equiv=&quot;Referrer-Policy&quot; content=&quot;no-referrer&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+  <main class="container">
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+      <h3>About Me</h3>
+      <p>
+        I am a Cybersecurity and Digital Forensics graduate from Kabarak University with practical experience in web application security testing,
+        vulnerability assessment, SOC operations, and secure backend development.
+      </p>
+      <p>
+        My hands-on skills are built through authorized lab environments, Hack The Box challenges, freelance security-related tasks,
+        and real backend API development using Flask. I focus on ethical, legal, and professional security practices aligned with industry standards.
+      </p>
+    </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;style&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-RESET ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        * {</p>
-<p style="line-height: 100%; margin-bottom: 0in">            margin:
-0;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-0;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-box-sizing: border-box;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+    <!-- ===== SKILLS ===== -->
+    <section id="skills">
+      <h3>Technical Skills</h3>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h4>Web Application Security</h4>
+          <p>OWASP Top 10 testing, authentication &amp; session security, input validation, access control testing.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Penetration Testing</h4>
+          <p>Authorized lab-based pentesting, vulnerability scanning, risk analysis, professional reporting.</p>
+        </div>
+        <div class="skill-card">
+          <h4>SOC &amp; Blue Team</h4>
+          <p>Log analysis, alert triage, incident response fundamentals, MITRE ATT&amp;CK concepts.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Tools &amp; Systems</h4>
+          <p>Kali Linux, Nmap, Burp Suite, Metasploit (basic), Wireshark, Linux CLI, Git.</p>
+        </div>
+        <div class="skill-card">
+          <h4>Development</h4>
+          <p>Python (Flask), REST APIs, JWT authentication, SQLite/MySQL basics.</p>
+        </div>
+      </div>
+    </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        body {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-family: Arial, Helvetica, sans-serif;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-line-height: 1.6;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background-color: #0f172a; /* dark navy */</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#e5e7eb;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio">
+      <h3>Portfolio Projects</h3>
+      <div class="portfolio-grid">
+        <div class="project-card">
+          <h4>Web Application Penetration Test (Lab)</h4>
+          <p>
+            Conducted a black-box web application penetration test on an authorized PHP-based lab system.
+            Identified SQL Injection, broken authentication, and information disclosure issues using OWASP methodology.
+          </p>
+        </div>
+        <div class="project-card">
+          <h4>Hack The Box – Redis Machine</h4>
+          <p>
+            Completed full enumeration and exploitation of a vulnerable Redis-based machine in a controlled lab environment.
+            Successfully obtained user and root access through misconfiguration abuse.
+          </p>
+        </div>
+        <div class="project-card">
+          <h4>Secure Backend API (Flask)</h4>
+          <p>
+            Designed and implemented a secure backend API with JWT authentication, role-based access control,
+            protected endpoints, and secure password handling.
+          </p>
+        </div>
+        <div class="project-card">
+          <h4>AI-Assisted SOC Log Analyzer</h4>
+          <p>
+            Built a prototype SOC automation tool that analyzes logs, detects suspicious patterns,
+            and assigns risk scores to security events for analyst review.
+          </p>
+        </div>
+      </div>
+      <a class="btn" href="Claudias_Musavini_Cybersecurity_Portfolio.pdf" target="_blank">Download PDF Portfolio</a>
+    </section>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        a {</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#38bdf8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-text-decoration: none;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:claudiasmisiko@gmail.com">claudiasmisiko@gmail.com</a></p>
+      <p>Freelance Platform: Upwork</p>
+      <p>GitHub: (optional – add when ready)</p>
+    </section>
+  </main>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        a:hover {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-text-decoration: underline;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-LAYOUT ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        header {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: linear-gradient(135deg, #020617, #020617);</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-3rem 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-text-align: center;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        header h1 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-size: 2.2rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 0.5rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        header h2 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-size: 1.1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-weight: normal;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#94a3b8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .container {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-max-width: 1000px;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            margin:
-auto;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-2rem 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        section {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 3rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        section h3 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-size: 1.4rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-border-left: 4px solid #38bdf8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-padding-left: 0.6rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-ABOUT ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .about p {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#cbd5f5;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-SKILLS ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .skills-grid
-{</p>
-<p style="line-height: 100%; margin-bottom: 0in">            display:
-grid;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));</p>
-<p style="line-height: 100%; margin-bottom: 0in">            gap:
-1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .skill-card
-{</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: #020617;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-border-radius: 8px;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            border:
-1px solid #1e293b;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .skill-card
-h4 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 0.5rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#38bdf8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-PORTFOLIO ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">       
-.portfolio-grid {</p>
-<p style="line-height: 100%; margin-bottom: 0in">            display:
-grid;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));</p>
-<p style="line-height: 100%; margin-bottom: 0in">            gap:
-1.2rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">       
-.project-card {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: #020617;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-1.2rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-border-radius: 10px;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            border:
-1px solid #1e293b;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">       
-.project-card h4 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-bottom: 0.5rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#38bdf8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">       
-.project-card p {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-size: 0.95rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#cbd5f5;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-BUTTONS ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .btn {</p>
-<p style="line-height: 100%; margin-bottom: 0in">            display:
-inline-block;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-margin-top: 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-0.6rem 1.2rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: #38bdf8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#020617;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-border-radius: 6px;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-weight: bold;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        .btn:hover {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: #0ea5e9;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-text-decoration: none;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-FOOTER ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        footer {</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-background: #020617;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-text-align: center;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            padding:
-1.5rem 1rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-font-size: 0.9rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            color:
-#94a3b8;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        /* ======
-RESPONSIVE ====== */</p>
-<p style="line-height: 100%; margin-bottom: 0in">        @media
-(max-width: 600px) {</p>
-<p style="line-height: 100%; margin-bottom: 0in">            header
-h1 {</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-font-size: 1.8rem;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            }</p>
-<p style="line-height: 100%; margin-bottom: 0in">        }</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;/style&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;/head&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;body&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;!-- =====
-HEADER ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;header&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;h1&gt;Claudias
-Musavini Misiko&lt;/h1&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">       
-&lt;h2&gt;Cybersecurity &amp; Digital Forensics | Web Security | SOC
-Analyst&lt;/h2&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;a
-class=&quot;btn&quot; href=&quot;#portfolio&quot;&gt;View
-Portfolio&lt;/a&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;/header&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;main
-class=&quot;container&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;!--
-===== ABOUT ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;section
-class=&quot;about&quot; id=&quot;about&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;h3&gt;About Me&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                I am
-a Cybersecurity and Digital Forensics graduate from Kabarak
-University with practical experience in web application security
-testing,</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-vulnerability assessment, SOC operations, and secure backend
-development.</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                My
-hands-on skills are built through authorized lab environments, Hack
-The Box challenges, freelance security-related tasks,</p>
-<p style="line-height: 100%; margin-bottom: 0in">                and
-real backend API development using Flask. I focus on ethical, legal,
-and professional security practices aligned with industry standards.</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;!--
-===== SKILLS ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;section
-id=&quot;skills&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;h3&gt;Technical Skills&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;div
-class=&quot;skills-grid&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;skill-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Web Application Security&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;OWASP Top 10 testing, authentication &amp; session security,
-input validation, access control testing.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;skill-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Penetration Testing&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;Authorized lab-based pentesting, vulnerability scanning,
-risk analysis, professional reporting.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;skill-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;SOC &amp; Blue Team&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;Log analysis, alert triage, incident response fundamentals,
-MITRE ATT&amp;CK concepts.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;skill-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Tools &amp; Systems&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;Kali Linux, Nmap, Burp Suite, Metasploit (basic), Wireshark,
-Linux CLI, Git.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;skill-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Development&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;Python (Flask), REST APIs, JWT authentication, SQLite/MySQL
-basics.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;!--
-===== PORTFOLIO ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;section
-id=&quot;portfolio&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;h3&gt;Portfolio Projects&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;div
-class=&quot;portfolio-grid&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;project-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Web Application Penetration Test (Lab)&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Conducted a black-box web application penetration test on an
-authorized PHP-based lab system.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Identified SQL Injection, broken authentication, and information
-disclosure issues using OWASP methodology.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;project-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Hack The Box – Redis Machine&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Completed full enumeration and exploitation of a vulnerable
-Redis-based machine in a controlled lab environment.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Successfully obtained user and root access through
-misconfiguration abuse.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;project-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;Secure Backend API (Flask)&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Designed and implemented a secure backend API with JWT
-authentication, role-based access control,</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   protected endpoints, and secure password handling.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">                &lt;div
-class=&quot;project-card&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;h4&gt;AI-Assisted SOC Log Analyzer&lt;/h4&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   Built a prototype SOC automation tool that analyzes logs, detects
-suspicious patterns,</p>
-<p style="line-height: 100%; margin-bottom: 0in">                    
-   and assigns risk scores to security events for analyst review.</p>
-<p style="line-height: 100%; margin-bottom: 0in">                   
-&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">               
-&lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;!--
-Link to PDF portfolio (upload PDF in same repo) --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">            &lt;a
-class=&quot;btn&quot;
-href=&quot;Claudias_Musavini_Cybersecurity_Portfolio.pdf&quot;
-target=&quot;_blank&quot;&gt;Download PDF Portfolio&lt;/a&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;!--
-===== CONTACT ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;section
-id=&quot;contact&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;h3&gt;Contact&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;p&gt;Email: &lt;a
-href=&quot;mailto:claudiasmisiko@gmail.com&quot;&gt;claudiasmisiko@gmail.com&lt;/a&gt;&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;p&gt;Freelance Platform: Upwork&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">           
-&lt;p&gt;GitHub: (optional – add when ready)&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;/main&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;!-- =====
-FOOTER ===== --&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;footer&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">        &lt;p&gt;©
-2026 Claudias Musavini Misiko | Ethical &amp; Authorized Security
-Testing Only&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">    &lt;/footer&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in"><br/>
-
-</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;/body&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0in">&lt;/html&gt;</p>
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2026 Claudias Musavini Misiko | Ethical &amp; Authorized Security Testing Only</p>
+  </footer>
 </body>
 </html>
