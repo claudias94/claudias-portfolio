@@ -25,7 +25,9 @@
 
     <style>
         /* ===== RESET ===== */
-        * {
+        *,
+        *::before,
+        *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -33,13 +35,14 @@
 
         html {
             scroll-behavior: smooth;
+            font-size: 18px; /* Slightly larger for readability */
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif; /* More modern system font */
             background-color: #0f172a;
             color: #e5e7eb;
-            line-height: 1.6;
+            line-height: 1.7; /* Improved readability */
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -48,9 +51,16 @@
         a {
             color: #38bdf8;
             text-decoration: none;
+            word-break: break-word; /* Improves link readability/wrapping */
         }
 
-        a:hover {
+        a:focus {
+            outline: 2px solid #38bdf8;
+            outline-offset: 2px;
+        }
+
+        a:hover,
+        a:active {
             text-decoration: underline;
         }
 
@@ -64,214 +74,318 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            padding: 0.6rem;
+            padding: 0.8rem 0; /* Increased padding for spacing */
+            gap: 0.7rem;
         }
 
         nav li {
-            margin: 0 1rem;
+            margin: 0 0.4rem;
         }
 
         nav a {
-            font-weight: bold;
-            padding: 0.4rem 0.7rem;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
             border-radius: 6px;
+            transition: background 0.2s, color 0.2s;
         }
 
+        nav a:focus,
         nav a:hover {
             background: #38bdf8;
             color: #020617;
         }
 
+        /* Improved "skip to main" accessibility */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: 1000;
+            background: #38bdf8;
+            color: #020617;
+            padding: 0.7rem 1.3rem;
+            border-radius: 6px;
+        }
+        .skip-link:focus {
+            left: 8px;
+            top: 8px;
+            width: auto;
+            height: auto;
+            font-weight: bold;
+            outline: 2px solid #0ea5e9;
+        }
+
         /* ===== HEADER ===== */
         header {
             text-align: center;
-            padding: 3rem 1rem 2rem;
-            background: linear-gradient(135deg, #020617, #020617);
+            padding: 3rem 1.1rem 2rem;
+            background: linear-gradient(135deg, #071629, #11234a 140%);
         }
 
         header h1 {
-            font-size: 2.3rem;
+            font-size: 2.35rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            line-height: 1.1;
         }
 
         header h2 {
-            font-size: 1.1rem;
-            color: #94a3b8;
+            font-size: 1.2rem;
+            color: #a2aecb;
             margin-top: 0.5rem;
+            font-weight: 400;
         }
 
         /* ===== CONTAINER ===== */
         .container {
-            max-width: 1000px;
+            max-width: 950px;
             margin: auto;
-            padding: 2rem 1rem;
+            padding: 2.2rem 1rem 2.2rem;
             flex-grow: 1;
         }
 
         section {
-            margin-bottom: 3rem;
+            margin-bottom: 2.6rem;
         }
 
         section h3 {
-            font-size: 1.4rem;
+            font-size: 1.35rem;
+            font-weight: 600;
             border-left: 4px solid #38bdf8;
-            padding-left: 0.6rem;
-            margin-bottom: 1rem;
+            padding-left: 0.7rem;
+            margin-bottom: 1.15rem;
+            letter-spacing: 0.01em;
+            color: #f1f5f9;
         }
 
-        /* ===== SKILLS ===== */
+        /* === Improved Section Spacing and Readability === */
+        section > p,
+        section ul,
+        section .card {
+            margin-bottom: 0.8rem;
+        }
+
+        /* ===== SKILLS/PROJECT GRID ===== */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.2rem;
         }
 
         .card {
-            background: #020617;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            padding: 1rem;
+            background: #182338;
+            border: 1px solid #253653;
+            border-radius: 10px;
+            padding: 1.1rem 1.1rem 1rem 1.15rem;
+            box-shadow: 0 2px 6px rgba(7,20,41,0.07);
+            transition: border 0.2s, box-shadow 0.2s;
         }
 
         .card h4 {
             color: #38bdf8;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.07rem;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #c9d6ee;
+        }
+
+        .card:focus-within,
+        .card:hover {
+            border: 1.5px solid #38bdf8;
+            box-shadow: 0 4px 14px rgba(56,189,248,0.09);
         }
 
         /* ===== BUTTON ===== */
         .btn {
             display: inline-block;
-            margin-top: 0.8rem;
-            padding: 0.6rem 1.2rem;
+            margin-top: 1.1rem;
+            padding: 0.65rem 1.5rem;
             background: #38bdf8;
             color: #020617;
+            border: none;
             border-radius: 6px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            outline: none;
         }
 
-        .btn:hover {
+        .btn:hover,
+        .btn:focus-visible {
             background: #0ea5e9;
+            color: #fff;
             text-decoration: none;
         }
 
         /* ===== FOOTER ===== */
         footer {
-            background: #020617;
+            background: #071629;
             text-align: center;
-            padding: 1.5rem 1rem;
-            font-size: 0.9rem;
+            padding: 2rem 1rem 1.3rem;
+            font-size: 1rem;
             color: #94a3b8;
         }
+        footer p {
+            margin-bottom: 0.4rem;
+        }
 
+        /* === Accessibility: Ensure color contrast for links & text === */
+        @media (prefers-color-scheme: dark) {
+            body {
+                color: #e5e7eb;
+                background: #0f172a;
+            }
+            nav, footer {
+                background: #020617;
+            }
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 700px) {
+            .container {
+                padding: 1.15rem 0.4rem;
+            }
+            section h3 {
+                padding-left: 0.5rem;
+                font-size: 1.11rem;
+            }
+        }
         @media (max-width: 600px) {
             nav ul {
                 flex-direction: column;
+                gap: 0.25rem;
             }
             nav li {
                 margin: 0.4rem 0;
             }
-            header h1 {
-                font-size: 1.9rem;
+            header {
+                padding: 2rem 0.2rem 1.5rem;
             }
+            header h1 {
+                font-size: 1.67rem;
+            }
+            .card {
+                padding: 0.92rem 0.6rem 0.92rem 0.65rem;
+            }
+        }
+        /* Add keyboard accessibility focus style for navigation links */
+        nav a:focus-visible {
+            outline: 2px solid #38bdf8;
+            background: #38bdf8;
+            color: #020617;
         }
     </style>
 </head>
 
 <body>
+    <!-- Accessibility: Skip to main content shortcut link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<nav aria-label="Main navigation">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<header>
-    <h1>Claudias Musavini Misiko</h1>
-    <h2>Cybersecurity • Digital Forensics • SOC Analysis</h2>
-</header>
+    <header>
+        <h1>Claudias Musavini Misiko</h1>
+        <h2>Cybersecurity<span aria-hidden="true"> • </span>Digital Forensics<span aria-hidden="true"> • </span>SOC Analysis</h2>
+    </header>
 
-<main class="container">
+    <main class="container" id="main-content" tabindex="-1">
+        <!-- Added tabindex for skip-link accessibility -->
 
-<section id="about">
-    <h3>About Me</h3>
-    <p>
-        I am a Cybersecurity and Digital Forensics graduate from Kabarak University with hands-on experience in
-        SOC operations, web application security testing, penetration testing labs, and secure backend API development.
-    </p>
-    <p>
-        My practical skills come from authorized lab environments, Hack The Box challenges, freelance security tasks,
-        and real-world backend projects using Flask. I strictly follow ethical, legal, and professional security practices.
-    </p>
-</section>
+        <section id="about" aria-labelledby="about-heading">
+            <h3 id="about-heading">About Me</h3>
+            <p>
+                I am a Cybersecurity and Digital Forensics graduate from Kabarak University with hands-on experience in
+                SOC operations, web application security testing, penetration testing labs, and secure backend API development.
+            </p>
+            <p>
+                My practical skills come from authorized lab environments, Hack The Box challenges, freelance security tasks,
+                and real-world backend projects using Flask. I strictly follow ethical, legal, and professional security practices.
+            </p>
+        </section>
 
-<section id="skills">
-    <h3>Technical Skills</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Web Security</h4>
-            <p>OWASP Top 10, authentication flaws, access control testing.</p>
-        </div>
-        <div class="card">
-            <h4>Penetration Testing</h4>
-            <p>Authorized lab pentesting, vulnerability analysis, reporting.</p>
-        </div>
-        <div class="card">
-            <h4>SOC & Blue Team</h4>
-            <p>Log analysis, alert triage, MITRE ATT&CK fundamentals.</p>
-        </div>
-        <div class="card">
-            <h4>Tools</h4>
-            <p>Kali Linux, Nmap, Burp Suite, Wireshark, Git.</p>
-        </div>
-        <div class="card">
-            <h4>Development</h4>
-            <p>Python, Flask, REST APIs, JWT, SQLite.</p>
-        </div>
-    </div>
-</section>
+        <section id="skills" aria-labelledby="skills-heading">
+            <h3 id="skills-heading">Technical Skills</h3>
+            <div class="grid" role="list">
+                <div class="card" role="listitem">
+                    <h4>Web Security</h4>
+                    <p>OWASP Top 10, authentication issues, access control testing.</p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>Penetration Testing</h4>
+                    <p>Authorized lab pentesting, vulnerability analysis, reporting.</p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>SOC &amp; Blue Team</h4>
+                    <p>Log analysis, alert triage, MITRE ATT&amp;CK fundamentals.</p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>Tools</h4>
+                    <p>Kali Linux, Nmap, Burp Suite, Wireshark, Git.</p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>Development</h4>
+                    <p>Python, Flask, REST APIs, JWT, SQLite.</p>
+                </div>
+            </div>
+        </section>
 
-<section id="portfolio">
-    <h3>Portfolio Projects</h3>
-    <div class="grid">
-        <div class="card">
-            <h4>Hack The Box – Redis Machine</h4>
-            <p>Enumerated and exploited Redis misconfiguration in a controlled lab to obtain root access.</p>
-        </div>
+        <section id="portfolio" aria-labelledby="portfolio-heading">
+            <h3 id="portfolio-heading">Portfolio Projects</h3>
+            <div class="grid" role="list">
+                <div class="card" role="listitem">
+                    <h4>Hack The Box – Redis Machine</h4>
+                    <p>
+                        Enumerated and safely explored Redis misconfiguration in a controlled lab to obtain root-level insight (legal/authorized context).
+                    </p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>Secure Backend API (Flask)</h4>
+                    <p>
+                        JWT authentication, role-based access control, secure password handling.
+                    </p>
+                </div>
+                <div class="card" role="listitem">
+                    <h4>AI-Assisted SOC Log Analyzer</h4>
+                    <p>
+                        Prototype system for log correlation, threat scoring, and SOC alert prioritization.
+                    </p>
+                </div>
+            </div>
+            <a class="btn" href="Claudias_Musavini_Cybersecurity_Portfolio.pdf" target="_blank" rel="noopener noreferrer">
+                Download PDF Portfolio
+            </a>
+        </section>
 
-        <div class="card">
-            <h4>Secure Backend API (Flask)</h4>
-            <p>JWT authentication, role-based access control, secure password handling.</p>
-        </div>
+        <section id="contact" aria-labelledby="contact-heading">
+            <h3 id="contact-heading">Contact</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li>Email: <a href="mailto:claudiasmisiko@gmail.com">claudiasmisiko@gmail.com</a></li>
+                <li>GitHub: <a href="https://github.com/claudias94" target="_blank" rel="noopener noreferrer">github.com/claudias94</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/claudias-musavini-3b0918116" target="_blank" rel="noopener noreferrer">Claudias Musavini</a></li>
+                <li>Upwork: <a href="https://www.upwork.com/freelancers/~011294543910024888" target="_blank" rel="noopener noreferrer">Freelance Profile</a></li>
+            </ul>
+        </section>
+    </main>
 
-        <div class="card">
-            <h4>AI-Assisted SOC Log Analyzer</h4>
-            <p>Prototype system for log correlation, threat scoring, and SOC alert prioritization.</p>
-        </div>
-    </div>
-
-    <a class="btn" href="Claudias_Musavini_Cybersecurity_Portfolio.pdf" target="_blank">
-        Download PDF Portfolio
-    </a>
-</section>
-
-<section id="contact">
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:claudiasmisiko@gmail.com">claudiasmisiko@gmail.com</a></p>
-    <p>Freelance Platform: <a href="https://www.upwork.com/freelancers/~011294543910024888" target="_blank">Upwork</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/claudias-musavini-3b0918116" target="_blank">Claudias Musavini</a></p>
-    # <p>GitHub: <em>(optional – add when ready)</em></p>
-</section>
-
-
-</main>
-
-<footer>
-    <p>© 2026 Claudias Musavini Misiko</p>
-    <p>Ethical & Authorized Security Testing Only</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Claudias Musavini Misiko</p>
+        <p>Ethical &amp; Authorized Security Testing Only</p>
+    </footer>
 </body>
 </html>
-
