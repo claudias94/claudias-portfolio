@@ -3,16 +3,25 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Cybersecurity portfolio of Claudias Musavini Misiko, with skills in web security, penetration testing, SOC analysis, and secure backend development." />
+
     <title>Claudias Musavini Misiko | Cybersecurity Portfolio</title>
 
-    <!-- Basic security headers (client-side best practice) -->
+    <!-- SEO -->
+    <meta name="description" content="Cybersecurity & Digital Forensics portfolio of Claudias Musavini Misiko. Skills in SOC analysis, penetration testing, web security, and secure backend development." />
+    <meta name="keywords" content="Cybersecurity, SOC Analyst, Digital Forensics, Penetration Testing, Web Security, Flask API, Kenya" />
+    <meta name="author" content="Claudias Musavini Misiko" />
+
+    <!-- Social Preview -->
+    <meta property="og:title" content="Claudias Musavini Misiko | Cybersecurity Portfolio" />
+    <meta property="og:description" content="Ethical cybersecurity professional with hands-on SOC, pentesting, and secure backend experience." />
+    <meta property="og:type" content="website" />
+
+    <!-- Security Headers (client-side best effort) -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta http-equiv="Referrer-Policy" content="no-referrer" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self';" />
 
     <style>
         /* ===== RESET ===== */
@@ -28,9 +37,9 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            background-color: #0f172a; /* dark navy */
+            background-color: #0f172a;
             color: #e5e7eb;
+            line-height: 1.6;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -45,9 +54,9 @@
             text-decoration: underline;
         }
 
-        /* ===== NAVIGATION ===== */
+        /* ===== NAV ===== */
         nav {
-            background-color: #020617;
+            background: #020617;
             border-bottom: 1px solid #1e293b;
         }
 
@@ -55,43 +64,39 @@
             list-style: none;
             display: flex;
             justify-content: center;
-            padding: 0.5rem 0;
+            padding: 0.6rem;
         }
 
-        nav ul li {
-            margin: 0 1.2rem;
+        nav li {
+            margin: 0 1rem;
         }
 
-        nav ul li a {
+        nav a {
             font-weight: bold;
-            font-size: 1rem;
-            padding: 0.3rem 0.6rem;
-            transition: background-color 0.3s ease;
-            border-radius: 5px;
+            padding: 0.4rem 0.7rem;
+            border-radius: 6px;
         }
 
-        nav ul li a:hover {
-            background-color: #38bdf8;
+        nav a:hover {
+            background: #38bdf8;
             color: #020617;
         }
 
         /* ===== HEADER ===== */
         header {
-            background: linear-gradient(135deg, #020617, #020617);
-            padding: 3rem 1rem 1.5rem;
             text-align: center;
+            padding: 3rem 1rem 2rem;
+            background: linear-gradient(135deg, #020617, #020617);
         }
 
         header h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
+            font-size: 2.3rem;
         }
 
         header h2 {
             font-size: 1.1rem;
-            font-weight: normal;
             color: #94a3b8;
-            margin-bottom: 1rem;
+            margin-top: 0.5rem;
         }
 
         /* ===== CONTAINER ===== */
@@ -108,81 +113,44 @@
 
         section h3 {
             font-size: 1.4rem;
-            margin-bottom: 1rem;
             border-left: 4px solid #38bdf8;
             padding-left: 0.6rem;
-        }
-
-        /* ===== ABOUT ===== */
-        .about p {
             margin-bottom: 1rem;
-            color: #cbd5f5;
         }
 
         /* ===== SKILLS ===== */
-        .skills-grid {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1rem;
         }
 
-        .skill-card {
+        .card {
             background: #020617;
-            padding: 1rem;
+            border: 1px solid #1e293b;
             border-radius: 8px;
-            border: 1px solid #1e293b;
+            padding: 1rem;
         }
 
-        .skill-card h4 {
-            margin-bottom: 0.5rem;
+        .card h4 {
             color: #38bdf8;
+            margin-bottom: 0.4rem;
         }
 
-        /* ===== PORTFOLIO ===== */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.2rem;
-        }
-
-        .project-card {
-            background: #020617;
-            padding: 1.2rem;
-            border-radius: 10px;
-            border: 1px solid #1e293b;
-        }
-
-        .project-card h4 {
-            margin-bottom: 0.5rem;
-            color: #38bdf8;
-        }
-
-        .project-card p {
-            font-size: 0.95rem;
-            color: #cbd5f5;
-            margin-bottom: 0.6rem;
-        }
-
-        /* ===== BUTTONS ===== */
+        /* ===== BUTTON ===== */
         .btn {
             display: inline-block;
-            margin-top: 1rem;
+            margin-top: 0.8rem;
             padding: 0.6rem 1.2rem;
             background: #38bdf8;
             color: #020617;
             border-radius: 6px;
             font-weight: bold;
-            transition: background-color 0.3s ease;
         }
 
         .btn:hover {
             background: #0ea5e9;
             text-decoration: none;
-        }
-
-        /* ===== CONTACT ===== */
-        #contact p {
-            margin-bottom: 0.6rem;
         }
 
         /* ===== FOOTER ===== */
@@ -194,143 +162,115 @@
             color: #94a3b8;
         }
 
-        footer p a {
-            color: #38bdf8;
-            margin: 0 0.5rem;
-        }
-
-        footer p a:hover {
-            text-decoration: underline;
-        }
-
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
             nav ul {
                 flex-direction: column;
             }
-            nav ul li {
+            nav li {
                 margin: 0.4rem 0;
+            }
+            header h1 {
+                font-size: 1.9rem;
             }
         }
     </style>
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav aria-label="Main navigation">
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Claudias Musavini Misiko</h1>
-        <h2>Cybersecurity & Digital Forensics | Web Security | SOC Analyst</h2>
-        <a class="btn" href="#portfolio">View Portfolio</a>
-    </header>
+<header>
+    <h1>Claudias Musavini Misiko</h1>
+    <h2>Cybersecurity • Digital Forensics • SOC Analysis</h2>
+</header>
 
-    <!-- MAIN CONTENT -->
-    <main class="container">
+<main class="container">
 
-        <!-- ABOUT -->
-        <section class="about" id="about">
-            <h3>About Me</h3>
-            <p>
-                I am a Cybersecurity and Digital Forensics graduate from Kabarak University with practical experience in web application security testing,
-                vulnerability assessment, SOC operations, and secure backend development.
-            </p>
-            <p>
-                My hands-on skills are built through authorized lab environments, Hack The Box challenges, freelance security-related tasks,
-                and real backend API development using Flask. I focus on ethical, legal, and professional security practices aligned with industry standards.
-            </p>
-        </section>
+<section id="about">
+    <h3>About Me</h3>
+    <p>
+        I am a Cybersecurity and Digital Forensics graduate from Kabarak University with hands-on experience in
+        SOC operations, web application security testing, penetration testing labs, and secure backend API development.
+    </p>
+    <p>
+        My practical skills come from authorized lab environments, Hack The Box challenges, freelance security tasks,
+        and real-world backend projects using Flask. I strictly follow ethical, legal, and professional security practices.
+    </p>
+</section>
 
-        <!-- SKILLS -->
-        <section id="skills">
-            <h3>Technical Skills</h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Web Application Security</h4>
-                    <p>OWASP Top 10 testing, authentication & session security, input validation, access control testing.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Penetration Testing</h4>
-                    <p>Authorized lab-based pentesting, vulnerability scanning, risk analysis, professional reporting.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>SOC & Blue Team</h4>
-                    <p>Log analysis, alert triage, incident response fundamentals, MITRE ATT&CK concepts.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Tools & Systems</h4>
-                    <p>Kali Linux, Nmap, Burp Suite, Metasploit (basic), Wireshark, Linux CLI, Git.</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Development</h4>
-                    <p>Python (Flask), REST APIs, JWT authentication, SQLite/MySQL basics.</p>
-                </div>
-            </div>
-        </section>
+<section id="skills">
+    <h3>Technical Skills</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Web Security</h4>
+            <p>OWASP Top 10, authentication flaws, access control testing.</p>
+        </div>
+        <div class="card">
+            <h4>Penetration Testing</h4>
+            <p>Authorized lab pentesting, vulnerability analysis, reporting.</p>
+        </div>
+        <div class="card">
+            <h4>SOC & Blue Team</h4>
+            <p>Log analysis, alert triage, MITRE ATT&CK fundamentals.</p>
+        </div>
+        <div class="card">
+            <h4>Tools</h4>
+            <p>Kali Linux, Nmap, Burp Suite, Wireshark, Git.</p>
+        </div>
+        <div class="card">
+            <h4>Development</h4>
+            <p>Python, Flask, REST APIs, JWT, SQLite.</p>
+        </div>
+    </div>
+</section>
 
-        <!-- PORTFOLIO -->
-        <section id="portfolio">
-            <h3>Portfolio Projects</h3>
-            <div class="portfolio-grid">
+<section id="portfolio">
+    <h3>Portfolio Projects</h3>
+    <div class="grid">
+        <div class="card">
+            <h4>Hack The Box – Redis Machine</h4>
+            <p>Enumerated and exploited Redis misconfiguration in a controlled lab to obtain root access.</p>
+        </div>
 
-                <div class="project-card">
-                    <h4>Web Application Penetration Test (Lab)</h4>
-                    <p>Conducted a black-box web application penetration test on an authorized PHP-based lab system.</p>
-                    <p>Identified SQL Injection, broken authentication, and information disclosure issues using OWASP methodology.</p>
-                </div>
+        <div class="card">
+            <h4>Secure Backend API (Flask)</h4>
+            <p>JWT authentication, role-based access control, secure password handling.</p>
+        </div>
 
-                <div class="project-card">
-                    <h4>Hack The Box – Redis Machine</h4>
-                    <p>Completed full enumeration and exploitation of a vulnerable Redis-based machine in a controlled lab environment.</p>
-                    <p>Successfully obtained user and root access through misconfiguration abuse.</p>
-                </div>
+        <div class="card">
+            <h4>AI-Assisted SOC Log Analyzer</h4>
+            <p>Prototype system for log correlation, threat scoring, and SOC alert prioritization.</p>
+        </div>
+    </div>
 
-                <div class="project-card">
-                    <h4>Secure Backend API (Flask)</h4>
-                    <p>Designed and implemented a secure backend API with JWT authentication, role-based access control, protected endpoints, and secure password handling.</p>
-                    <a href="https://github.com/claudias94/secure-backend-api" target="_blank" class="btn">View Code</a>
-                </div>
+    <a class="btn" href="Claudias_Musavini_Cybersecurity_Portfolio.pdf" target="_blank">
+        Download PDF Portfolio
+    </a>
+</section>
 
-                <div class="project-card">
-                    <h4>AI-Assisted SOC Log Analyzer</h4>
-                    <p>Built a prototype SOC automation tool that analyzes logs, detects suspicious patterns, and assigns risk scores to security events for analyst review.</p>
-                    <a href="https://github.com/claudias94/ai-soc-log-analyzer" target="_blank" class="btn">View Code</a>
-                </div>
+<section id="contact">
+    <h3>Contact</h3>
+    <p>Email: <a href="mailto:claudiasmisiko@gmail.com">claudiasmisiko@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/claudias94" target="_blank">github.com/claudias94</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/claudias-musavini-3b0918116" target="_blank">Claudias Musavini</a></p>
+    <p>Upwork: <a href="https://www.upwork.com/freelancers/~011294543910024888" target="_blank">Freelance Profile</a></p>
+</section>
 
-            </div>
-            <a class="btn" href="Claudias_Musavini_Cybersecurity_Portfolio.pdf" target="_blank">Download PDF Portfolio</a>
-        </section>
+</main>
 
-        <!-- CONTACT -->
-        <section id="contact">
-            <h3>Contact</h3>
-            <p>Email: <a href="mailto:claudiasmisiko@gmail.com">claudiasmisiko@gmail.com</a></p>
-            <p>Upwork: <a href="https://www.upwork.com/freelancers/~011294543910024888?mp_source=share" target="_blank">View Profile</a></p>
-            <p>GitHub: <a href="https://github.com/claudias94" target="_blank">claudias94</a></p>
-            <p>LinkedIn: <a href="www.linkedin.com/in/claudias-musavini-3b0918116" target="_blank">Claudias Musavini</a></p>
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Claudias Musavini Misiko | Ethical & Authorized Security Testing Only</p>
-        <p>
-            <a href="https://github.com/claudias94" target="_blank">GitHub</a> |
-            <a href="www.linkedin.com/in/claudias-musavini-3b0918116" target="_blank">Claudias Musavini</a>
-        </p>
-    </footer>
+<footer>
+    <p>© 2026 Claudias Musavini Misiko</p>
+    <p>Ethical & Authorized Security Testing Only</p>
+</footer>
 
 </body>
 </html>
+
