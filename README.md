@@ -1,91 +1,175 @@
-# Claudias Musavini Misiko – Cybersecurity Portfolio
+# Claudias Musavini Misiko
 
-This repository hosts my **personal cybersecurity portfolio**, showcasing
-hands-on experience in **web application security, penetration testing,
-SOC analysis, and secure backend development**.
+## Cybersecurity Analyst | DFIR | Threat Detection | Penetration Testing | Security Automation
 
-It is intended for **recruiters, hiring managers, and freelance clients**
-to review my technical approach, ethics, and practical capabilities.
+Cybersecurity professional specializing in **threat detection, digital forensics and incident response (DFIR), penetration testing, network security, and Python-based security automation**.
 
----
+I build practical security tools and investigation workflows that combine cybersecurity analysis, automation, software development, and evidence-driven reporting.
 
-## 👨‍💻 About Me
-
-I am a Cybersecurity and Digital Forensics graduate from **Kabarak University**
-with practical experience gained through:
-
-- Authorized lab environments
-- Hack The Box challenges
-- Secure backend API development
-- SOC-aligned log analysis and incident response simulations
-
-I focus on **ethical, legal, and professional security practices**.
+My work spans both offensive and defensive security, with a focus on identifying vulnerabilities, detecting suspicious activity, investigating security events, automating repetitive analysis, and producing structured technical reports.
 
 ---
 
-## 🛠️ Technical Skills
+## Professional Profile
 
-- **Web Application Security**
-  - OWASP Top 10
-  - Authentication & session security
-  - Access control testing
+I am a **Computer Security and Forensics professional** with practical experience across cybersecurity operations, incident response, security automation, penetration testing, Linux environments, and backend development.
 
-- **Penetration Testing**
-  - Black-box & gray-box testing (authorized labs)
-  - Vulnerability assessment & reporting
+My technical work includes building security tooling from the ground up, analysing security events, developing detection logic, investigating system and network activity, and documenting security findings.
 
-- **SOC & Blue Team**
-  - Log analysis
-  - Alert triage
-  - MITRE ATT&CK fundamentals
+I have developed practical experience through:
 
-- **Tools**
-  - Kali Linux, Nmap, Burp Suite
-  - Wireshark, Metasploit (basic)
-  - Linux CLI, Git, GitHub
+- Digital forensics and incident response projects
+- Security automation and Python development
+- SOC-oriented log analysis
+- Threat and IOC detection
+- Network security analysis
+- Authorized penetration testing laboratories
+- Hack The Box security challenges
+- Secure backend/API development
+- Linux system administration and investigation
+- Freelance technical projects
 
-- **Development**
-  - Python (Flask)
-  - REST APIs
-  - JWT authentication
-  - SQLite/MySQL basics
+I approach cybersecurity with an emphasis on **technical accuracy, ethical testing, evidence preservation, automation, and continuous improvement**.
 
 ---
 
-## 📂 Featured Projects
+# Core Competencies
 
-- **Web Application Penetration Test (Lab)**
-- **Hack The Box – Redis Machine**
-- **Secure Backend API (Flask + JWT)**
-- **AI-Assisted SOC Log Analyzer**
+## Cybersecurity
 
-Details are available in the portfolio website:
-👉 https://claudias94.github.io/claudias-portfolio/
+- Threat Detection
+- Security Monitoring
+- Incident Response
+- Digital Forensics
+- IOC Analysis
+- Vulnerability Assessment
+- Network Security
+- Security Auditing
+- Risk Assessment
+- Security Event Analysis
+- Security Documentation
+- Incident Investigation
+
+## Digital Forensics & Incident Response
+
+- Live Evidence Collection
+- Process Analysis
+- Network Connection Analysis
+- Listening Port Analysis
+- Service Analysis
+- Persistence Detection
+- Suspicious IP Detection
+- IOC Detection
+- Threat Severity Assessment
+- Evidence Integrity Verification
+- SHA-256 Hashing
+- Evidence Manifests
+- Chain of Custody
+- Forensic Reporting
+- Evidence Packaging
+
+## Penetration Testing
+
+- Reconnaissance
+- Network Enumeration
+- Service Enumeration
+- Web Application Security Testing
+- Authentication Testing
+- Access Control Testing
+- Vulnerability Identification
+- Privilege Escalation
+- Security Assessment
+- Penetration Testing Documentation
+- Security Recommendations
+
+All penetration testing activities are performed within authorized environments.
+
+## Security Automation & Development
+
+- Python
+- Flask
+- Bash
+- REST APIs
+- JWT Authentication
+- SQLite
+- Git
+- GitHub
+- Docker
+- HTML
+- JavaScript
+- Security Automation
+- Log Processing
+- Detection Engineering
+
+## Security Tools
+
+- Nmap
+- Wireshark
+- Burp Suite
+- Gobuster
+- Metasploit
+- Nessus
+- OpenVAS
+- Aircrack-ng
+- OpenVPN
+- Linux Security Utilities
+- Hack The Box
 
 ---
 
-## 🔐 Ethics, Scope & Authorization
+# Featured Projects
 
-All security testing activities referenced in this repository were conducted
-**only in authorized environments**.
+## 1. Claus Incident Response Toolkit (CIRT)
 
-📄 See:
-- `SCOPE.md`
-- `SECURITY.md`
+**Digital Forensics & Incident Response Framework**
 
-Unauthorized testing is **not permitted or encouraged**.
+CIRT is a modular incident response toolkit designed to automate the workflow from live evidence collection through IOC analysis, forensic reporting, integrity verification, and evidence packaging.
 
----
+### Key Capabilities
 
-## 📄 License
+- Cross-platform evidence collection
+- Linux evidence collector
+- Windows evidence collector
+- System information collection
+- Running process analysis
+- Running service analysis
+- Logged-in user collection
+- Network connection analysis
+- Listening port analysis
+- Suspicious process detection
+- Suspicious port detection
+- Suspicious IP detection
+- Persistence detection
+- IOC aggregation
+- Threat severity assessment
+- Automated forensic reporting
+- HTML reports
+- JSON reports
+- CSV reports
+- Markdown reports
+- SHA-256 evidence hashing
+- Evidence manifest generation
+- Chain-of-custody documentation
+- Evidence packaging
 
-This project is licensed under the **MIT License**.
-See `LICENSE` for details.
+### Architecture
 
----
+CIRT uses a modular architecture that separates:
 
-## 📬 Contact
-
-- Email: claudiasmisiko@gmail.com  
-- Freelance Platform: Upwork  
-
+```text
+Evidence Collection
+        │
+        ▼
+IOC Analysis
+        │
+        ▼
+Threat Assessment
+        │
+        ▼
+Forensic Reporting
+        │
+        ▼
+Evidence Integrity
+        │
+        ▼
+Evidence Packaging
